@@ -6,9 +6,9 @@ contract Fundme {
             address owner;
             string title;
             string description;
-            unint256 target;
-            unint256 dateline;
-            unint256 amountCollected;
+            uint256 target;
+            uint256 dateline;
+            uint256 amountCollected;
             string imagePath;
             address[] donators;
             unint256 donations;
@@ -48,7 +48,7 @@ contract Fundme {
         }
 
         function getDonators(unint256 _id) view public returns(address[] memory, unint256 [] memory){
-            return(campaigns[_id].donators, campaigns[_id].donations)
+            return(campaigns[_id].donators, campaigns[_id].donations);
         }
 
         function getCampaigns() public view returns(Campaign[] memory){
